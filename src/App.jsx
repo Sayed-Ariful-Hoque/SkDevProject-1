@@ -9,22 +9,16 @@ const App = () => {
     { id: 1, name: "Daisy Apu", email: "daisyApu@gmail.com", address: "24 north kafrul" },
   ]
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-10 m-auto">
-          <div className="row">
-            {teamMember1.map((member) => {
-              return (
-                <div className="col-lg-4">
-                  <TeamMemberCard key={member.id} id={member.id} name={member.name} email={member.email} address={member.address} />
-                </div>
-              )
-            }
-            )}
+    <>
+      {teamMember1.map((member) => {
+        return (
+          <div>
+            <TeamMemberCard key={member.id} id={member.id} name={member.name} email={member.email} address={member.address} />
           </div>
-        </div>
-      </div>
-    </div>
+        )
+      }
+      )}
+    </>
   )
 }
 
